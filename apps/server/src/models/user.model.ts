@@ -19,6 +19,7 @@ const userSchema = new mongoose.Schema(
     role: { type: String, enum: UserRole, default: "User" },
     employee_id: { type: String, required: true, unique: true },
     department: { type: mongoose.Types.ObjectId, ref: "Department" },
+    team: { type: mongoose.Types.ObjectId, ref: "Team" },
     mobile_number: { type: String },
     is_active: { type: Boolean, default: true },
   },

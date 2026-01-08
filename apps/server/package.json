@@ -1,0 +1,31 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "backend for ai performance review summarizer",
+  "license": "ISC",
+  "author": "Faiyaz",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .ts",
+    "dev": "nodemon --config ./nodemon.json"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.6",
+    "cors": "^2.8.5",
+    "express": "^5.2.1",
+    "mongoose": "^9.1.2",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.10",
+    "@types/cors": "^2.8.19",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/mongoose": "^5.11.97",
+    "cookie-parser": "^1.4.7",
+    "jsonwebtoken": "^9.0.3",
+    "morgan": "^1.10.1",
+    "nodemon": "^3.1.11"
+  }
+}

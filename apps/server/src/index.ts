@@ -3,6 +3,7 @@ import db from "./config/db";
 import { config } from "./config/config";
 import cors from "cors";
 import cookieParser from "cookie-parser";
+import morgan from "morgan";
 import { errorHandlerMiddleware } from "./middlewares/errorHandler.middleware";
 
 const app = express();
@@ -38,6 +39,8 @@ app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
+
+app.use(morgan("dev"));
 
 //application routes would go here
 

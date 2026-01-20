@@ -5,6 +5,7 @@ import morgan from "morgan";
 import appV1Routes from "./routes/api/v1/index";
 import db from "./config/db";
 import { errorHandlerMiddleware } from "./middleware/errorHandler.middleware";
+import helmet from "helmet";
 
 const app = express();
 db;
@@ -12,7 +13,7 @@ db;
 const allowedOrigins = [
   "http://localhost:5173",
   "http://localhost:5174",
-  config.frontenUrl,
+  config.frontendUrl,
 ];
 
 const corsOptions = {
@@ -28,6 +29,8 @@ const corsOptions = {
   },
   credentials: true,
 };
+
+app.use(helmet());
 app.use(cors(corsOptions));
 
 app.use(express.json());
